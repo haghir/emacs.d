@@ -1,0 +1,51 @@
+[submodule "vendor/js2-mode"]
+	path = vendor/js2-mode
+	url = https://github.com/mooz/js2-mode.git
+[submodule "vendor/web-mode"]
+	path = vendor/web-mode
+	url = https://github.com/fxbois/web-mode.git
+[submodule "vendor/bison-mode"]
+	path = vendor/bison-mode
+	url = https://github.com/Wilfred/bison-mode.git
+[submodule "vendor/helm"]
+	path = vendor/helm
+	url = https://github.com/emacs-helm/helm.git
+[submodule "vendor/yasnippet"]
+	path = vendor/yasnippet
+	url = https://github.com/joaotavora/yasnippet.git
+[submodule "vendor/async"]
+	path = vendor/async
+	url = https://github.com/jwiegley/emacs-async.git
+[submodule "vendor/markdown-mode"]
+	path = vendor/markdown-mode
+	url = https://github.com/jrblevin/markdown-mode.git
+[submodule "vendor/csharp-mode"]
+	path = vendor/csharp-mode
+	url = https://github.com/josteink/csharp-mode.git
+[submodule "vendor/pcre2el"]
+	path = vendor/pcre2el
+	url = https://github.com/joddie/pcre2el.git
+[submodule "vendor/visual-regexp"]
+	path = vendor/visual-regexp
+	url = https://github.com/benma/visual-regexp.el.git
+[submodule "vendor/visual-regexp-steroids"]
+	path = vendor/visual-regexp-steroids
+	url = https://github.com/benma/visual-regexp-steroids.el.git
+[submodule "vendor/yasnippet-snippets"]
+	path = vendor/yasnippet-snippets
+	url = https://github.com/AndreaCrotti/yasnippet-snippets.git
+[submodule "vendor/yasmate"]
+	path = vendor/yasmate
+	url = https://github.com/capitaomorte/yasmate.git
+[submodule "vendor/typescript-mode"]
+	path = vendor/typescript-mode
+	url = https://github.com/emacs-typescript/typescript.el.git
+[submodule "vendor/rust-mode"]
+	path = vendor/rust-mode
+	url = https://github.com/rust-lang/rust-mode.git
+[submodule "vendor/scala-mode"]
+	path = vendor/scala-mode
+	url = https://github.com/hvesalai/emacs-scala-mode.git
+[submodule "vendor/haskell-mode"]
+	path = vendor/haskell-mode
+	url = https://github.com/haskell/haskell-mode.git

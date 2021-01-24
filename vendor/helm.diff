@@ -1,0 +1,13 @@
+diff --git a/helm/Makefile b/helm/Makefile
+index accc8baf..51a95521 100644
+--- a/helm/Makefile
++++ b/helm/Makefile
+@@ -60,6 +60,8 @@ ifneq "$(ASYNC_STRAIGHT_DIR)" ""
+ 	LOADPATH += -L $(ASYNC_STRAIGHT_DIR)
+ endif
+ 
++LOADPATH += -L $(HOME)/.emacs.d/vendor/async
++
+ # Files to compile
+ EL			:= $(sort $(wildcard helm*.el))
+ 

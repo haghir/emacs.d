@@ -1,0 +1,17 @@
+# Temporary files.
+.#*
+\#*#
+*~
+
+# Session.
+session.[0-9][0-9]*
+
+# Auto generated.
+/auto-save-list/
+/url/
+/recentf
+/tramp
+
+# Local settings.
+/eshell/
+/kkcrc
