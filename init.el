@@ -88,17 +88,17 @@
 (require 'visual-regexp-steroids)
 (setq vr/engine 'pcre2el)
 
-;; async.
+;; async
 (add-to-list 'load-path (locate-user-emacs-file "vendor/async"))
 (autoload 'dired-async-mode "dired-async.el" nil t)
 (dired-async-mode 1)
 
-;; helm.
+;; helm
 (add-to-list 'load-path (locate-user-emacs-file "vendor/helm"))
 (require 'helm-config)
 (helm-mode 1)
 
-;; yasnippet.
+;; yasnippet
 (add-to-list 'load-path (locate-user-emacs-file "vendor/yasnippet"))
 (require 'yasnippet)
 (add-to-list 'yas-snippet-dirs (locate-user-emacs-file
@@ -109,28 +109,28 @@
                                 "vendor/yasnippet-snippets/snippets"))
 (yas-global-mode 1)
 
-;; Shell script.
+;; Shell script
 (setq sh-basic-offset 8)
 (setq sh-indentation 8)
 
-;; SQL.
+;; SQL
 (add-hook 'sql-mode-hook (lambda ()
                            (setq indent-tabs-mode nil)
                            (setq tab-width 4)
                            (setq sql-indent-offset 4)))
 
-;; Lisp Mode.
+;; Lisp Mode
 (add-hook 'emacs-lisp-mode-hook (lambda ()
                                   (setq indent-tabs-mode nil)))
 
-;; C Mode.
+;; C Mode
 (add-hook 'c-mode-common-hook (lambda ()
                                 (setq indent-tabs-mode t)
                                 (setq tab-width 8)
                                 (setq c-basic-offset 8)))
 (add-to-list 'auto-mode-alist '("\\.tc\\'" . c-mode))
 
-;; Bison Mode.
+;; Bison Mode
 (add-to-list 'load-path (locate-user-emacs-file  "vendor/bison-mode"))
 (autoload 'bison-mode "bison-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.y\\'" . bison-mode))
@@ -149,17 +149,17 @@
           (loop while (re-search-forward "^\\([a-z].*?\\)\\s-*\n?\\s-*:" end t)
                 collect (cons (match-string 1) (point))))))
 
-;; Haskell Mode.
+;; Haskell Mode
 (add-to-list 'load-path (locate-user-emacs-file "vendor/haskell-mode"))
 (autoload 'haskell-mode "haskell-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.hs\\'" . haskell-mode))
 
-;; Scala Mode.
+;; Scala Mode
 (add-to-list 'load-path (locate-user-emacs-file "vendor/scala-mode"))
 (autoload 'scala-mode "scala-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.scala\\'" . scala-mode))
 
-;; Rust Mode.
+;; Rust Mode
 (add-to-list 'load-path (locate-user-emacs-file "vendor/rust-mode"))
 (autoload 'rust-mode "rust-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-mode))
@@ -168,13 +168,13 @@
                             (setq tab-width 4)
                             (setq rust-indent-offset 4)))
 
-;; Python Mode.
+;; Python Mode
 (add-hook 'python-mode-hook (lambda ()
                               (setq indent-tabs-mode nil)
                               (setq tab-width 4)
                               (setq python-indent-offset 4)))
 
-;; Perl Mode.
+;; Perl Mode
 (defalias 'perl-mode 'cperl-mode)
 (add-to-list 'auto-mode-alist '("\\.yp\\'" . cperl-mode))
 (add-hook 'cperl-mode-hook (lambda ()
@@ -182,7 +182,7 @@
                              (setq tab-width 8)
                              (setq cperl-indent-level 8)))
 
-;; JS2 Mode.
+;; JS2 Mode
 (add-to-list 'load-path (locate-user-emacs-file "vendor/js2-mode"))
 (autoload 'js2-mode "js2-mode" nil t)
 (autoload 'js2-jsx-mode "js2-mode" nil t)
@@ -199,7 +199,7 @@
                                (setq js2-basic-offset 4)
                                (setq tab-width 4)))
 
-;; TypeScript Mode.
+;; TypeScript Mode
 (add-to-list 'load-path (locate-user-emacs-file "vendor/typescript-mode"))
 (autoload 'typescript-mode "typescript-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.ts\\'" . typescript-mode))
@@ -208,7 +208,7 @@
                                   (setq typescript-indent-level 4)
                                   (setq tab-width 4)))
 
-;; Web Mode.
+;; Web Mode
 (add-to-list 'load-path (locate-user-emacs-file "vendor/web-mode"))
 (autoload 'web-mode "web-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
@@ -229,7 +229,7 @@
                            (setq web-mode-code-indent-offset 2)
                            (setq tab-width 8)))
 
-;; Markdown Mode.
+;; Markdown Mode
 (add-to-list 'load-path (locate-user-emacs-file "vendor/markdown-mode"))
 (autoload 'markdown-mode "markdown-mode"
   "Major mode for editing Markdown files" t)
@@ -243,7 +243,7 @@
                                 (setq tab-width 4)
                                 (setq markdown-list-indent-width 4)
                                 (setq indent-line-function 'insert-tab)))
-;; CSharp Mode.
+;; CSharp Mode
 (add-to-list 'load-path (locate-user-emacs-file "vendor/csharp-mode"))
 (autoload 'csharp-mode "csharp-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.cs\\'" . csharp-mode))
@@ -251,6 +251,11 @@
                               (setq indent-tabs-mode nil)
                               (setq tab-width 4)
                               (setq c-basic-offset 4)))
+
+;; Text Mode
+(add-hook 'text-mode-hook (lambda ()
+                            (setq indent-tabs-mode nil)
+                            (setq tab-width 3)))
 
 ;; ============================================================================
 ;; Key bind
