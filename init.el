@@ -40,12 +40,12 @@
 ;; GUI
 (when (display-graphic-p)
   ;; Font.
-  (create-fontset-from-ascii-font "Source Han Code JP-12:weight=normal:slant=normal"
+  (create-fontset-from-ascii-font "Source Han Code JP R-12:weight=normal:slant=normal"
                                   nil
                                   "myfonts")
   (set-fontset-font "fontset-myfonts"
                     'unicode
-                    "Source Han Code JP-12:weight=normal:slant=normal"
+                    "Source Han Code JP R-12:weight=normal:slant=normal"
                     nil
                     'append)
   (add-to-list 'default-frame-alist
