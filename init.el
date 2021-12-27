@@ -204,7 +204,7 @@
 (autoload 'typescript-mode "typescript-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.ts\\'" . typescript-mode))
 (add-hook 'typescript-mode-hook (lambda ()
-                                  (setq indent-tabs-mode t)
+                                  (setq indent-tabs-mode nil)
                                   (setq typescript-indent-level 4)
                                   (setq tab-width 4)))
 
@@ -227,7 +227,7 @@
                            (setq web-mode-markup-indent-offset 2)
                            (setq web-mode-css-indent-offset 2)
                            (setq web-mode-code-indent-offset 2)
-                           (setq tab-width 8)))
+                           (setq tab-width 2)))
 
 ;; Markdown Mode
 (add-to-list 'load-path (locate-user-emacs-file "vendor/markdown-mode"))
