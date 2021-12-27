@@ -2,7 +2,6 @@
 .SILENT: help
 help:
 	echo "make init   : initialize submodules"
-	echo "make prepare: prepare submodules"
 	echo "make build  : build submodules"
 	echo "make reset  : reset submodules (reset --hard && clean -fdx)"
 	echo "make update : reset and update submodules"
@@ -10,10 +9,6 @@ help:
 .PHONY: init
 init:
 	git submodule update --init --recursive
-
-.PHONY: prepare
-prepare:
-	$(MAKE) prepare -C vendor
 
 .PHONY: build
 build:

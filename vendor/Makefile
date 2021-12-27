@@ -3,14 +3,11 @@ TARGETS += async
 TARGETS += js2-mode
 TARGETS += markdown-mode
 
-.PHONY: prepare
-prepare:
-	patch -p1 < helm.diff
-
 .PHONY: build $(TARGETS)
 build: $(TARGETS)
 
-helm: async
-
 $(TARGETS):
-	-$(MAKE) -C $@
+	-$(MAKE) -e -C $@
+
+helm: async
+helm: export ASYNC_STRAIGHT_DIR := $(HOME)/.emacs.d/vendor/async
