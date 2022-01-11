@@ -2,6 +2,7 @@ TARGETS := helm
 TARGETS += async
 TARGETS += js2-mode
 TARGETS += markdown-mode
+TARGETS += yaml-mode
 
 .PHONY: build $(TARGETS)
 build: $(TARGETS)

@@ -252,6 +252,15 @@
                               (setq tab-width 4)
                               (setq c-basic-offset 4)))
 
+;; yaml
+(add-to-list 'load-path (locate-user-emacs-file "vendor/yaml-mode"))
+(autoload 'yaml-mode "yaml-mode" nil t)
+(add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
+(add-to-list 'auto-mode-alist '("\\.yaml\\'" . yaml-mode))
+(add-hook 'yaml-mode-hook (lambda ()
+                            (setq indent-tabs-mode nil)
+                            (setq tab-width 2)))
+
 ;; Text Mode
 (add-hook 'text-mode-hook (lambda ()
                             (setq indent-tabs-mode nil)
