@@ -39,17 +39,6 @@
 
 ;; GUI
 (when (display-graphic-p)
-  ;; Font.
-  (create-fontset-from-ascii-font "Source Code Pro-12:weight=normal:slant=normal"
-                                  nil
-                                  "myfonts")
-  (set-fontset-font "fontset-myfonts"
-                    'unicode
-                    "Source Code Pro-16:weight=normal:slant=normal"
-                    nil
-                    'append)
-  (add-to-list 'default-frame-alist
-               '(font . "fontset-myfonts"))
   ;; Theme
   (load-theme 'manoj-dark t)
   (set-face-background 'default "#1e1e1e")
