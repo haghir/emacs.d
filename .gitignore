@@ -3,6 +3,9 @@
 \#*#
 *~
 
+# Local settings.
+/local.el
+
 # Session.
 session.[0-9][0-9]*
 
