@@ -192,6 +192,7 @@
 (add-to-list 'load-path (locate-user-emacs-file "vendor/typescript-mode"))
 (autoload 'typescript-mode "typescript-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.ts\\'" . typescript-mode))
+(add-to-list 'auto-mode-alist '("\\.tsx\\'" . typescript-mode))
 (add-hook 'typescript-mode-hook (lambda ()
                                   (setq indent-tabs-mode nil)
                                   (setq typescript-indent-level 4)
