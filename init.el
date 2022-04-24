@@ -118,6 +118,7 @@
                                 (setq tab-width 8)
                                 (setq c-basic-offset 8)))
 (add-to-list 'auto-mode-alist '("\\.tc\\'" . c-mode))
+(add-to-list 'auto-mode-alist '("\\.sdr\\'" . c-mode))
 
 ;; Bison Mode
 (add-to-list 'load-path (locate-user-emacs-file  "vendor/bison-mode"))
