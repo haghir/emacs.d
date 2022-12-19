@@ -232,8 +232,8 @@
 (add-to-list 'auto-mode-alist '("README\\.md\\'" . gfm-mode))
 (add-hook 'markdown-mode-hook (lambda ()
                                 (setq indent-tabs-mode nil)
-                                (setq tab-width 4)
-                                (setq markdown-list-indent-width 4)
+                                (setq tab-width 2)
+                                (setq markdown-list-indent-width 2)
                                 (setq indent-line-function 'insert-tab)))
 ;; CSharp Mode
 (add-to-list 'load-path (locate-user-emacs-file "vendor/csharp-mode"))
