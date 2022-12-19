@@ -84,7 +84,8 @@
 
 ;; helm
 (add-to-list 'load-path (locate-user-emacs-file "vendor/helm"))
-(require 'helm-config)
+(require 'helm)
+(require 'helm-autoloads)
 (helm-mode 1)
 
 ;; yasnippet
