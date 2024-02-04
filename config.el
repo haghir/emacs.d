@@ -286,11 +286,3 @@
 (global-set-key (kbd "M-r") 'gtags-find-rtag)
 (global-set-key (kbd "M-s") 'gtags-find-symbol)
 (global-set-key (kbd "M-p") 'gtags-pop-stack)
-
-;; ============================================================================
-;; Unversioned local setting.
-;; ============================================================================
-
-(let ((local-settings (expand-file-name "local.el" user-emacs-directory)))
-  (when (file-exists-p local-settings)
-    (load-file local-settings)))
