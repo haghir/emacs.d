@@ -286,3 +286,21 @@
 (global-set-key (kbd "M-r") 'gtags-find-rtag)
 (global-set-key (kbd "M-s") 'gtags-find-symbol)
 (global-set-key (kbd "M-p") 'gtags-pop-stack)
+
+;; ============================================================================
+;; My commands
+;; ============================================================================
+
+;; Forms the development environment.
+(defun devenv ()
+  (interactive)
+  (delete-other-windows)
+  (split-window-horizontally)
+  (dired ".")
+  (shrink-window-horizontally (/ (* (window-total-width) 2) 3))
+  (other-window 1)
+  (split-window-vertically)
+  (enlarge-window (/ (window-total-height) 2))
+  (other-window 1)
+  (eshell)
+  (other-window -1))
