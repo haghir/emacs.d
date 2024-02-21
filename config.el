@@ -296,12 +296,23 @@
   (interactive)
   (delete-other-windows)
   (let* (
-      (w (/ (* (window-total-width) 4) 5))
+      (w (/ (* (window-total-width) 1) 5))
       (h (/ (* (window-total-height) 3) 4)))
+    (split-window-vertically)
+    (enlarge-window (- h (window-total-height)))
     (split-window-horizontally)
+    (shrink-window-horizontally (- (window-total-width) w))
     (dired ".")
-    (shrink-window-horizontally (- w (window-total-width)))
-    (other-window 1)
+    (other-window 2)
+    (eshell)
+    (other-window -1)))
+
+;; Forms the shell environment.
+(defun shellenv ()
+  (interactive)
+  (delete-other-windows)
+  (let* (
+      (h (/ (* (window-total-height) 3) 4)))
     (split-window-vertically)
     (enlarge-window (- h (window-total-height)))
     (other-window 1)
